@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: react-demo-app
+    build:
+      context: .
+      dockerfile: docker/Dockerfile-dev
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
+
